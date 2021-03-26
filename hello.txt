@@ -1,3 +1,8 @@
 hello world 
 welcome to ibm
+<<<<<<< HEAD
 New changes made
+=======
+fkasfjfsa
+adkahdlas
+>>>>>>> 3c4b0109fe79a87cfd591db91fcb143c5a56162a
