@@ -18,7 +18,7 @@ public class Savings extends Account {
 		// TODO Auto-generated method stub
 		if(amount<=balance-MIN_SAV_BAL) {
 			balance-=amount;
-			txns[idx++]=new Transaction("DB", amount, balance);
+			txns.add(new Transaction("DB", amount, balance));
 		}
 		else {
 			throw new BalanceException("Insufficient balance");

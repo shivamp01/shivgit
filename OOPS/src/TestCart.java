@@ -7,7 +7,7 @@ import com.ibm.xe.ShoppingCart;
 
 public class TestCart {
 	public static void main(String[] args) {
-		Product p1=new Product("a",200, 3);
+		Product p1=new Product("a",20, 3);
 		Product p2=new Product("b",20,5);
 		Product p3=new Product("c",30,3);
 		Product p4=new Product("d",50,2);
@@ -16,7 +16,7 @@ public class TestCart {
 		ShoppingCart sc=new ShoppingCart();
 		try {
 			sc.addProduct(p1);
-		} catch (OutOfStockException | CartInvalidException e) {
+		} catch (OutOfStockException | CartInvalidException e ) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
@@ -44,12 +44,7 @@ public class TestCart {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-		try {
-			sc.addProduct(p6);
-		} catch (OutOfStockException | CartInvalidException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 		Payment pay1=new Payment(123, 1000);
 		try {
 			sc.checkOut(pay1,"HOLI200");

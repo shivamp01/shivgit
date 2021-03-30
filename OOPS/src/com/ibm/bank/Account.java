@@ -5,6 +5,9 @@ package com.ibm.bank;
  * @version 1.0
  *
  */
+
+import java.util.Vector;
+
 public abstract class  Account implements Banking {
 	private int accNo;
 	private String holder;
@@ -18,8 +21,8 @@ public abstract class  Account implements Banking {
 	public static final double INIT_CUR_BAL=5000;
 	public static final double MIN_CUR_BAL=0;
 	
-	protected Transaction[] txns;
-	protected int idx;
+	protected  Vector<Transaction> txns;
+	//protected int idx;
 	static {
 		autogen=INIT_ACC_NO;
 	}
@@ -34,13 +37,13 @@ public abstract class  Account implements Banking {
 		this.accNo = autogen++;
 		this.holder = holder;
 		this.balance = balance;
-		txns=new Transaction[10];
-		txns[idx++]=new Transaction("OB", balance, balance);
+		txns=new Vector<Transaction>();
+		txns.add(new Transaction("OB", balance, balance));
 	}
 	
 	public void deposit(double amount) {
 		balance=balance+amount;
-		txns[idx++]=new Transaction("CR", amount, balance);
+		txns.add(new Transaction("CR", amount, balance));
 		
 	}
 	
@@ -48,8 +51,8 @@ public abstract class  Account implements Banking {
 	
 	public void statement() {
 		System.out.println("Statement for A/C"+accNo);
-		for(int i=0;i<idx;i++) {
-			txns[i].print();
+		for(int i=0;i<txns.size();i++) {
+			txns.get(i).print();
 		}
 	}
 	

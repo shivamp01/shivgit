@@ -25,7 +25,7 @@ public class TestAccount {
 //		c1.deposit(4000);
 //		c1.summary();
 		Banking s1=AccountFactory.openSavingsAccount("POLO");
-		s1.deposit(1000000);
+		s1.deposit(1000);
 		try {
 			s1.withdraw(10);
 		} catch (BalanceException e) {
@@ -33,7 +33,7 @@ public class TestAccount {
 			e.printStackTrace();	//used for debugging-user: developers
 		}
 		try {
-			s1.withdraw(1000000);
+			s1.withdraw(1000);
 		} catch (BalanceException e) {
 			// TODO Auto-generated catch block
 		//System.out.println(e);  		//for system/application audit-User:loggers

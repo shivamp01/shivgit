@@ -13,7 +13,7 @@ public interface Hello {
 }
 class HelloDemo{
 	public static void main(String[] args) {
-		Hello h=()->"Hello world";
+		Hello h=()->"Hello world";		//Lambda Expression
 		System.out.println(h.sayHello());
 		
 		Hello h1=()->{

@@ -20,5 +20,6 @@ public class TestStock {
 		System.out.println(h==b);
 		System.out.println(h==e);
 		
+		
 	}
 }

@@ -26,12 +26,12 @@ public class Series extends Media{
 	}
 	
 	
-//	@Override
-//	public void play(User u) throws SubscriptionException, AgeRestrictionException {
-//		//super.play(u);
-//		System.out.println("Playing season 1 episode 1");
-//		
-//	}
+	@Override
+	public void play(UserI u) throws SubscriptionException, AgeRestrictionException {
+		super.play(u);
+		System.out.println("Playing season 1 episode 1");
+		
+	}
 	public void play(UserI user,int ses,int epi) throws SubscriptionException, AgeRestrictionException {
 		User u=(User)user;
 		super.play(u);
