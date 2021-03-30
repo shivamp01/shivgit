@@ -1,5 +1,6 @@
-[5:41 PM] "\"\\\"Zubair Shaikh (Guest)\\\"\""
-    
+
+public class Copy{
+    public static void main(String args[]){
 
 FileInputStream inFile = null;
 
@@ -54,4 +55,6 @@ e.printStackTrace();
 }​​​​​​​​
 
 }​​​​​​​​
+    }
+}
 
